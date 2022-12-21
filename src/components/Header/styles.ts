@@ -42,11 +42,32 @@ export const MenuContainer = styled.nav`
 `;
 
 export const SocialIconsContainer = styled.div`
-  svg{
-    font-size: 2rem;
+  a{
+    text-decoration: none;
+    color: black;
 
     &:not(:last-child){
-      margin-right: 0.8rem;
+        margin-right: 0.8rem;
+      }
+
+    svg{
+      font-size: 2rem;
+
+      &.instagram:hover{
+        color: red
+      }
+  
+      &.behance:hover{
+        color:blue
+      }
+  
+      &.linktree:hover{
+        color: green
+      }
+  
+      &.linkedin:hover{
+        color: blue
+      }
     }
   }
 `;

@@ -1,5 +1,4 @@
-import { SiInstagram, SiArtstation, SiLinktree } from 'react-icons/si'
-import { HiOutlineMail } from 'react-icons/hi'
+import { SiInstagram, SiLinktree, SiLinkedin } from 'react-icons/si'
 import { ImBehance2 } from 'react-icons/im'
 
 import { HeaderContainer, LogoContainer, MenuContainer, SocialIconsContainer } from "./styles"
@@ -26,15 +25,29 @@ const Header = (props: Props) => {
       </MenuContainer>
 
       <SocialIconsContainer>
-        <SiInstagram className='instagram'/>
+        <a href="https://www.instagram.com/nolria_art/"
+          target='_blank' rel='noopener noreferrer'
+        >
+          <SiInstagram className='instagram' />
+        </a>
 
-        <ImBehance2 className='behance'/>
+        <a href="https://www.behance.net/nolria"
+          target='_blank' rel='noopener noreferrer'
+        >
+          <ImBehance2 className='behance'/>
+        </a>
 
-        <SiArtstation className='artstation'/>
+        <a href="https://linktr.ee/nolria.art"
+          target='_blank' rel='noopener noreferrer'
+        >
+          <SiLinktree className='linktree'/>
+        </a>
 
-        <SiLinktree className='linktree'/>
-
-        <HiOutlineMail className='email'/>
+        <a href="https://www.linkedin.com/in/nolria-max-323687238/"
+          target='_blank' rel='noopener noreferrer'
+        >
+          <SiLinkedin className='linkedin'/>
+        </a>
       </SocialIconsContainer>
     </HeaderContainer>
   )
