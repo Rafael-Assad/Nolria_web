@@ -1,9 +1,10 @@
+import Ilustration from "../../components/Ilustration"
 
-type Props = {}
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Ilustration imgSrc="https://picsum.photos/200"/>
+    </div>
   )
 }
 
