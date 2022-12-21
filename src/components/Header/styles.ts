@@ -9,6 +9,8 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
+  box-shadow: 0 4px 10px #0003;
 `;
 
 export const LogoContainer = styled.div`

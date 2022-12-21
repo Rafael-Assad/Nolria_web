@@ -10,4 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Kadwa', serif;
   }
 
+  :root{
+    background-color: #FFF;
+  }
 `;
