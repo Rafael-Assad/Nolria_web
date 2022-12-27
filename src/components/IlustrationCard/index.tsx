@@ -8,14 +8,13 @@ interface Props {
   closeFunction: () => void;
 }
 
-const IlustrationCard = ({ closeFunction, show, details}: Props) => {
+const IlustrationCard = ({ imgSrc, details, closeFunction, show}: Props) => {
 
   return (
     <DialogPaperContainer open={show} onClose={closeFunction} fullWidth maxWidth='lg' >
       <IlustrationCardContainer>
         <div className="art">
-
-        Olha eu aqui
+          <img src={imgSrc} alt="" />
         </div>
 
         <div className="artInfo">
