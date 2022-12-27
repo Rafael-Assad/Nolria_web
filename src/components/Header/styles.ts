@@ -28,8 +28,13 @@ export const MenuContainer = styled.nav`
 
     li{
       list-style: none;
-      font-size: 1.4rem;
-      font-weight: 700;
+      a{
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: inherit;
+      }
+      
 
       &:not(:last-child){
         margin-right: 0.5rem;

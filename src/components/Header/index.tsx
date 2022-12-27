@@ -2,6 +2,7 @@ import { SiInstagram, SiLinktree, SiLinkedin } from 'react-icons/si'
 import { ImBehance2 } from 'react-icons/im'
 
 import { HeaderContainer, LogoContainer, MenuContainer, SocialIconsContainer } from "./styles"
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
@@ -14,13 +15,29 @@ const Header = (props: Props) => {
 
       <MenuContainer>
         <ul>
-          <li>Home</li>
+          <li>
+            <Link to="/">
+              Home
+            </Link>
+          </li>
 
-          <li>About</li>
+          <li>
+            <Link to="/about">
+              About
+            </Link>
+          </li>
 
-          <li>Portifolio</li>
+          <li>
+            <Link to="/portifolio">
+              Portifolio
+            </Link>
+          </li>
 
-          <li>Contact</li>
+          <li>
+            <Link to="/contact">
+              Contact
+            </Link>
+          </li>
         </ul>
       </MenuContainer>
 
