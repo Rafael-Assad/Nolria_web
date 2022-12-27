@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from 'react';
+import { useState } from 'react';
 import IlustrationCard from '../IlustrationCard';
 import { IlustrationContainer } from './styles'
 
@@ -9,9 +9,7 @@ interface Props {
 const Ilustration = ({imgSrc}: Props) => {
   const [showIlustrationCard, setShowIlustrationCard] = useState<boolean>(false)
 
-  const toogleIlustrationCard = (e: MouseEvent<HTMLDivElement>) => {
-    e.stopPropagation()
-
+  const toogleIlustrationCard = () => {
     setShowIlustrationCard(!showIlustrationCard)
   }
 
@@ -19,8 +17,7 @@ const Ilustration = ({imgSrc}: Props) => {
     <IlustrationContainer>
       <img src={imgSrc} alt="" onClickCapture={toogleIlustrationCard} />
 
-      {showIlustrationCard && <IlustrationCard closeFunction={toogleIlustrationCard} />}
-      
+      <IlustrationCard closeFunction={toogleIlustrationCard} show={showIlustrationCard} />
     </IlustrationContainer>
   )
 }

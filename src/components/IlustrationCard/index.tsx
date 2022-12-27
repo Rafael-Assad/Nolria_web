@@ -1,33 +1,36 @@
-import { MouseEvent } from "react"
-import { IlustrationCardContainer } from "./styles"
+import { IlustrationCardContainer, DialogPaperContainer } from "./styles"
 
 interface Props {
-  closeFunction: (e: MouseEvent<HTMLDivElement>) => void
+  closeFunction: () => void;
+  show: boolean;
 }
 
-const IlustrationCard = ({ closeFunction }: Props) => {
+const IlustrationCard = ({ closeFunction, show }: Props) => {
 
   return (
-    <IlustrationCardContainer onClickCapture={closeFunction}>
-      <div className="art">
+    <DialogPaperContainer open={show} onClose={closeFunction} fullWidth maxWidth='lg' >
+      <IlustrationCardContainer>
+        <div className="art">
 
-      Olha eu aqui
-      </div>
+        Olha eu aqui
+        </div>
 
-      <div className="artInfo">
-        <section>
-          <h2>
-            Título da obra
-          </h2>
+        <div className="artInfo">
+          <section>
+            <h2>
+              Título da obra
+            </h2>
 
-          <p>Data de criação</p>
-        </section>
+            <p>Data de criação</p>
+          </section>
 
-        <section>
-          <p>Aqui eu vou ter um belo texto de exemplo pra poder descrever a ilustração</p>
-        </section>
-      </div>
-    </IlustrationCardContainer>
+          <section>
+            <p>Aqui eu vou ter um belo texto de exemplo pra poder descrever a ilustração</p>
+          </section>
+        </div>
+      </IlustrationCardContainer>
+    </DialogPaperContainer>
+    
   )
 }
 
