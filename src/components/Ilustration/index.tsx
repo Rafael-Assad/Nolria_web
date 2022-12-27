@@ -2,11 +2,18 @@ import { useState } from 'react';
 import IlustrationCard from '../IlustrationCard';
 import { IlustrationContainer } from './styles'
 
-interface Props {
-  imgSrc: string;
+export interface ImageDetails {
+  title: string;
+  description: string;
+  creationDate?: string
 }
 
-const Ilustration = ({imgSrc}: Props) => {
+interface Props {
+  imgSrc: string;
+  details: ImageDetails;
+}
+
+const Ilustration = ({imgSrc, details}: Props) => {
   const [showIlustrationCard, setShowIlustrationCard] = useState<boolean>(false)
 
   const toogleIlustrationCard = () => {
@@ -17,7 +24,10 @@ const Ilustration = ({imgSrc}: Props) => {
     <IlustrationContainer>
       <img src={imgSrc} alt="" onClickCapture={toogleIlustrationCard} />
 
-      <IlustrationCard closeFunction={toogleIlustrationCard} show={showIlustrationCard} />
+      <IlustrationCard details={details} imgSrc={imgSrc}
+        closeFunction={toogleIlustrationCard} 
+        show={showIlustrationCard} 
+      />
     </IlustrationContainer>
   )
 }

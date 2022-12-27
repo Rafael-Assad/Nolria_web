@@ -1,11 +1,14 @@
+import { ImageDetails } from "../Ilustration";
 import { IlustrationCardContainer, DialogPaperContainer } from "./styles"
 
 interface Props {
-  closeFunction: () => void;
+  imgSrc: string;
+  details: ImageDetails
   show: boolean;
+  closeFunction: () => void;
 }
 
-const IlustrationCard = ({ closeFunction, show }: Props) => {
+const IlustrationCard = ({ closeFunction, show, details}: Props) => {
 
   return (
     <DialogPaperContainer open={show} onClose={closeFunction} fullWidth maxWidth='lg' >
@@ -18,14 +21,16 @@ const IlustrationCard = ({ closeFunction, show }: Props) => {
         <div className="artInfo">
           <section>
             <h2>
-              Título da obra
+              {details.title}
             </h2>
 
-            <p>Data de criação</p>
+            {details.creationDate && <p>{details.creationDate}</p>}
           </section>
 
           <section>
-            <p>Aqui eu vou ter um belo texto de exemplo pra poder descrever a ilustração</p>
+            <p>
+              {details.description}
+            </p>
           </section>
         </div>
       </IlustrationCardContainer>
