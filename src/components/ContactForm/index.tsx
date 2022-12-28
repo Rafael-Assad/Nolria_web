@@ -1,45 +1,28 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 
 import Button from "../Button";
 import Input from "../Input";
 import TextArea from "../TextArea";
 
+import { schema, fromSubmit } from './scripts'
 import { FormContainer } from "./styles";
 
-type Props = {};
 
-const schema = yup.object().shape({
-  name: yup
-    .string()
-    .min(2)
-    .max(255)
-    .required('Esse campo é obrigatório'),
-  email: yup
-    .string()
-    .required()
-    .min(2)
-    .max(255)
-    .required()
-    .label("Email is required"),
-  subject: yup.string().required().min(2).max(255).label("Subject is required"),
-  message: yup
-   .string()
-   .min(20)
-   .required()
-});
-
-const ContactForm = (props: Props) => {
-  const {register, formState: { errors }, handleSubmit,} = useForm({
+const ContactForm = () => {
+  const {register, handleSubmit, reset, formState, formState: { errors }} = useForm({
     resolver: yupResolver(schema),
   });
 
-  const fromSubmit = (data: any) => console.log(data);
+  useEffect(() => {
+    if(formState.isSubmitSuccessful){
+      reset()
+    }
+  }, [reset, formState])
+  
 
-  const logErrors = () => {
-    if(errors) console.log(errors)
-  }
+  const resetForm = () => reset()
 
   return (
     <FormContainer onSubmit={handleSubmit(fromSubmit)}>
@@ -75,9 +58,9 @@ const ContactForm = (props: Props) => {
       />
 
       <div className="buttonField">
-        <Button type="submit" buttonName="Enviar" onClick={logErrors}/>
+        <Button type="submit" buttonName="Enviar" />
 
-        <Button type="reset" buttonName="Limpar" />
+        <Button type="reset" buttonName="Limpar" onClick={resetForm} />
       </div>
     </FormContainer>
   );

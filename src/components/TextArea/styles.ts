@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TextAreaContainer = styled.div`
-  margin-bottom: 1.7rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
 
@@ -22,5 +22,15 @@ export const TextAreaContainer = styled.div`
     border: 2px solid #EFEFEF;
     outline: none;    
     resize: vertical;
+
+    &.error{
+      border-color: #FF1D1D;
+    }
+  }
+
+  .errorMessage{
+    height: 1.7rem;
+    font-size: 1.2rem;
+    color: #FF1D1D;
   }
 `;

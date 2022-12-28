@@ -17,11 +17,14 @@ const Input = ({inputName, label, type="text", registerItem, errors, ...rest}: I
       </label>
 
       <input type={type} 
-        id={inputName} 
+        id={inputName}
+        className={errors[inputName] && 'error'}
         {...registerItem(inputName)}
         {...rest}
       />
-      {errors[inputName] && <p>{errors[inputName].message}</p>}
+      <p className="errorMessage">
+        {errors[inputName] && (errors[inputName].message)}
+      </p>
     </InputContainer>
   )
 }

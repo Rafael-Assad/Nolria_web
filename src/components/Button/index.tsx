@@ -3,14 +3,11 @@ import { ButtonContainer } from "./styles"
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   buttonName: string;
-  clickAction?: () => void;
 }
 
-const Button = ({buttonName, clickAction, type='button', ...rest}: ButtonProps) => {
+const Button = ({buttonName, type='button', ...rest}: ButtonProps) => {
   return (
-    <ButtonContainer onClick={clickAction}
-      type={type} {...rest}
-    >
+    <ButtonContainer type={type} {...rest}>
       {buttonName}
     </ButtonContainer>
   )

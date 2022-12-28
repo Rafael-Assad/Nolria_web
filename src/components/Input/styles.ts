@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const InputContainer = styled.div`
-  margin-bottom: 1.7rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
 
@@ -20,5 +20,15 @@ export const InputContainer = styled.div`
     line-height: 2.4rem;
     border: 2px solid #EFEFEF;
     outline: none;
+
+    &.error{
+      border-color: #FF1D1D;
+    }
+  }
+
+  .errorMessage{
+    height: 1.7rem;
+    font-size: 1.2rem;
+    color: #FF1D1D;
   }
 `;

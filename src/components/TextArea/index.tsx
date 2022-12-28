@@ -18,10 +18,13 @@ const TextArea = ({inputName, label, registerItem, errors, ...rest}:TextAreaProp
       </label>
       
       <textarea id={inputName} 
+        className={errors[inputName] && 'error'}
         {...registerItem(inputName)}
         {...rest}
       />
-      {errors[inputName] && <p>{errors[inputName].message}</p>}
+      <p className="errorMessage">
+        {errors[inputName] && (errors[inputName].message)}
+      </p>
     </TextAreaContainer>
   )
 }

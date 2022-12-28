@@ -59,19 +59,19 @@ export const SocialIconsContainer = styled.div`
       font-size: 2rem;
 
       &.instagram:hover{
-        color: red
+        color:  #D62976
       }
   
       &.behance:hover{
-        color:blue
+        color: #053EFF
       }
   
       &.linktree:hover{
-        color: green
+        color: #4D6D17
       }
   
       &.linkedin:hover{
-        color: blue
+        color: #0072B1
       }
     }
   }
