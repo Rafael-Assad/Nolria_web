@@ -1,9 +1,12 @@
+import IlustationGalery from "../../components/IlustrationGalery"
 
 type Props = {}
 
 const Portifolio = (props: Props) => {
   return (
-    <div>Portifolio</div>
+    <div>
+      <IlustationGalery/>
+    </div>
   )
 }
 
