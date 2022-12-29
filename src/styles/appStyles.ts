@@ -9,4 +9,16 @@ export const AppContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 `
+
+export const MainContainer = styled.main`
+  width: 80vw;
+  max-width: 100%;
+  min-height: 82vh;
+  margin-bottom: 3vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
