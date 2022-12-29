@@ -28,6 +28,7 @@ export const MenuContainer = styled.nav`
 
     li{
       list-style: none;
+
       a{
         text-decoration: none;
         font-size: 1.4rem;
@@ -35,6 +36,9 @@ export const MenuContainer = styled.nav`
         color: inherit;
       }
       
+      &.active{
+        background: radial-gradient(ellipse closest-side at center, #FA8072, transparent);
+      }
 
       &:not(:last-child){
         margin-right: 0.5rem;
