@@ -1,3 +1,5 @@
+
+
 import hundredYearsMain from '../../assets/100yearsMain.png'
 import hundredYearsSpot from '../../assets/100yearsSpot.jpg'
 import abrobrinhaConcept from '../../assets/abrobrinhaCharConcept.png'
@@ -9,65 +11,68 @@ import poisonCat from '../../assets/poisonCat.jpg'
 import present from '../../assets/presentFromHoney.jpg'
 // import redMist from '../../assets/RedMist.png'
 
+
+
+
 export const ilustrationMock = [
   {
-    img: hundredYearsMain,
+    illustration: hundredYearsMain,
     title: 'Breakfast',
     hash: '#editorial',
     rows: 2,
     cols: 1,
   },
   {
-    img: deep,
+    illustration: deep,
     title: 'Hats',
     hash: '#editorial',
     rows: 1,
     cols: 1,
   },
   {
-    img: hundredYearsSpot,
+    illustration: hundredYearsSpot,
     title: 'Burger',
     hash: '#editorial',
     rows: 1,
     cols: 1,
   },
   {
-    img: abrobrinhaRun,
+    illustration: abrobrinhaRun,
     title: 'Coffee',
     hash: '#publishing',
     rows: 2,
     cols: 1,
   },
   {
-    img: abrobrinhaConcept,
+    illustration: abrobrinhaConcept,
     title: 'Camera',
     hash: '#publishing',
     rows: 2,
     cols: 2,
   },
   {
-    img: deepSpot,
+    illustration: deepSpot,
     title: 'Honey',
     hash: '#publishing',
     rows: 1,
     cols: 1,
   },
   {
-    img: muieMaga,
+    illustration: muieMaga,
     title: 'Basketball',
     hash: '#games',
     rows: 2,
     cols: 1,
   },
   {
-    img: poisonCat,
+    illustration: poisonCat,
     title: 'Fern',
     hash: '#games',
     rows: 2,
     cols: 1,
   },
   {
-    img: present,
+    illustration: present,
     title: 'Fern',
     hash: '#personal',
     rows: 2,
