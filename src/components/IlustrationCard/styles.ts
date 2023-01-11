@@ -19,7 +19,7 @@ export const IlustrationCardContainer = styled.div`
     background-color: #fff5;
 
     img{
-      width: 60vw;
+      width: 40vw;
       height: 90vh;
 
       object-fit: contain;

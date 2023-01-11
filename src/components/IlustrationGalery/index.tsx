@@ -30,8 +30,7 @@ const IlustationGalery = (props: Props) => {
   return (
     <ImageList variant="quilted"
       sx={{ width: '80vw'}}
-      cols={4}
-      rowHeight={121}
+      cols={4} rowHeight={121}
     >
       {filteredIlustrations.map((illustr: IllustrationInfo) => {
         return (

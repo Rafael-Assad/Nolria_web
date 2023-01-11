@@ -10,7 +10,6 @@ const Home = () => {
   useEffect(() => {
     backEnd.get('illustrations')
       .then(response => {
-        console.log(response.data[0].illustration)
         setillustrations(response.data)
       })
   }, [])

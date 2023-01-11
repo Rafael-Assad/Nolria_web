@@ -23,8 +23,7 @@ const Illustration = ({imgSrc, details, rows, cols, ...rest}: IllustrationProps)
   }
 
   return (
-    <IlustrationContainer rows={rows}
-    cols={cols}>
+    <IlustrationContainer rows={rows} cols={cols}>
       <img src={imgSrc} 
         alt="" 
         onClickCapture={toogleIlustrationCard} 
