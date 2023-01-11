@@ -17,6 +17,11 @@ export const ContactContainer = styled.div`
     .bugdetAlert{
       margin-bottom: 4rem;
       font-weight: 700;
+      font-size: 1.5rem; 
+    }
+
+    p{
+    font-size: 1.2rem;
     }
   }
 

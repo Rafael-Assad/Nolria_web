@@ -1,4 +1,7 @@
 import * as yup from "yup";
+import backEnd from "../../services/api";
+import { BudgetEmail } from "../../types";
+import { SeverityOpts } from "../SnackBarAlert";
 
 export const schema = yup.object().shape({
   name: yup.string()
@@ -23,5 +26,25 @@ export const schema = yup.object().shape({
     .min(20, 'Por favor, de mais detalhes sobre sua ideia')
 });
 
-export const fromSubmit = (data: any) => console.log(data);
 
+
+export const sendEmailBackend = async (emailInfo: BudgetEmail, 
+    setOpenSnackBarState: (bool: boolean) => void, // Avaliar pra ver se da pra eliminar esse
+    setSnackSeverityState: (severity: SeverityOpts) => void,
+    setSnackMessageState: (message: string) => void
+    ) => {
+  
+  await backEnd.post('contact/', emailInfo)
+    .then(() => {
+      setOpenSnackBarState(true)
+      setSnackSeverityState('success')
+      setSnackMessageState('Pedido de Orçamento enviado com sucesso')
+    })
+    .catch(error =>{
+      console.error(error)
+
+      setOpenSnackBarState(true)
+      setSnackSeverityState('error')
+      setSnackMessageState('Erro ao enviar orçamento. Por favor, mande email diretamente')
+    })
+}

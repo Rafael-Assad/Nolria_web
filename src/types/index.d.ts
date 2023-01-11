@@ -9,3 +9,10 @@ export interface IllustrationInfo{
   cols: number;
   rows: number;
 }
+
+export interface BudgetEmail {
+  name: string;
+	subject: string;
+	email: string;
+	message: string;
+}
