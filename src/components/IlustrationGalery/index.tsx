@@ -1,8 +1,11 @@
 import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import { useLocation } from 'react-router-dom';
+
+import Illustration from '../Ilustration';
+
 import { useIllustrations } from '../../services/hooks';
 import { ilustrationMock} from './scripts';
+import { IllustrationInfo } from '../../types';
 
 type Props = {}
 
@@ -30,18 +33,15 @@ const IlustationGalery = (props: Props) => {
       cols={4}
       rowHeight={121}
     >
-      {filteredIlustrations.map((ilustration) => (
-        <ImageListItem key={ilustration.illustration} 
-          cols={ilustration.cols || 1} 
-          rows={ilustration.rows || 1}
-        >
-          <img
-            src={ilustration.illustration}
-            alt={ilustration.title}
-            loading="lazy"
-          />
-        </ImageListItem>
-      ))}
+      {filteredIlustrations.map((illustr: IllustrationInfo) => {
+        return (
+        <Illustration key={illustr.id} 
+          imgSrc={illustr.illustration}
+          details={illustr} 
+          cols={illustr.cols || 1} 
+          rows={illustr.rows || 1}
+        />
+      )})}
     </ImageList>
   );
 }

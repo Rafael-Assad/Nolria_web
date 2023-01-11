@@ -1,5 +1,5 @@
 import artistImage from '../../assets/artist.png'
-import Ilustration, { ImageDetails } from "../../components/Ilustration"
+import Illustration, { ImageDetails } from "../../components/Ilustration"
 import { AboutContainer } from "./styles"
 
 type Props = {}
@@ -11,9 +11,9 @@ const About = (props: Props) => {
   }
   return (
     <AboutContainer>
-      <Ilustration imgSrc={artistImage}
+      {/* <Illustration imgSrc={artistImage}
         details={artistDetails}
-      />
+      /> */}
 
       <div className="details">
         <h2>

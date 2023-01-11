@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ImgHTMLAttributes, useState } from 'react';
 import IlustrationCard from '../IlustrationCard';
 import { IlustrationContainer } from './styles'
 
@@ -8,12 +8,14 @@ export interface ImageDetails {
   creationDate?: string
 }
 
-interface Props {
+interface IllustrationProps extends ImgHTMLAttributes<HTMLImageElement> {
   imgSrc: string;
   details: ImageDetails;
+  rows: number;
+  cols: number;
 }
 
-const Ilustration = ({imgSrc, details}: Props) => {
+const Illustration = ({imgSrc, details, rows, cols, ...rest}: IllustrationProps) => {
   const [showIlustrationCard, setShowIlustrationCard] = useState<boolean>(false)
 
   const toogleIlustrationCard = () => {
@@ -21,8 +23,13 @@ const Ilustration = ({imgSrc, details}: Props) => {
   }
 
   return (
-    <IlustrationContainer>
-      <img src={imgSrc} alt="" onClickCapture={toogleIlustrationCard} />
+    <IlustrationContainer rows={rows}
+    cols={cols}>
+      <img src={imgSrc} 
+        alt="" 
+        onClickCapture={toogleIlustrationCard} 
+        {...rest}
+      />
 
       <IlustrationCard details={details} imgSrc={imgSrc}
         closeFunction={toogleIlustrationCard} 
@@ -32,4 +39,4 @@ const Ilustration = ({imgSrc, details}: Props) => {
   )
 }
 
-export default Ilustration
+export default Illustration

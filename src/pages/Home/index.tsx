@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
-import Ilustration, { ImageDetails } from "../../components/Ilustration"
+import Illustration from "../../components/Ilustration"
 import backEnd from "../../services/api"
-import { Illustration } from "../../types"
+import { IllustrationInfo } from "../../types"
 
 const Home = () => {
-  const [illustrations, setillustrations] = useState<Illustration[]>([])
+  const [illustrations, setillustrations] = useState<IllustrationInfo[]>([])
 
   useEffect(() => {
     backEnd.get('illustrations')
@@ -14,20 +14,16 @@ const Home = () => {
       })
   }, [])
   
-
-  const imageMocInfo:ImageDetails = {
-    title: 'Um título provisório',
-    description: 'Officia irure nisi excepteur duis. Cupidatat irure cupidatat ex pariatur. Deserunt nulla ipsum duis non adipisicing ad proident eu magna ad aliquip reprehenderit sit consectetur.',
-    creationDate: 'string'
-  }
   return (
     <div>
       {illustrations.map(illustration => {
-        return (
-          <Ilustration key={illustration.id} 
-            imgSrc={illustration.illustration}
-            details={imageMocInfo}
-          />
+        return (<div>
+            Vou aplicar a galeria aqui depois de fazer uns ajustes na rota de pegar as ilustrações
+          </div>
+          // <Illustration key={illustration.id} 
+          //   imgSrc={illustration.illustration}
+          //   details={imageMocInfo}
+          // />
         )
       })}
       
