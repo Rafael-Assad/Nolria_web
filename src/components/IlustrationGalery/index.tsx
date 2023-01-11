@@ -35,13 +35,14 @@ const IlustationGalery = (props: Props) => {
     >
       {filteredIlustrations.map((illustr: IllustrationInfo) => {
         return (
-        <Illustration key={illustr.id} 
-          imgSrc={illustr.illustration}
-          details={illustr} 
-          cols={illustr.cols || 1} 
-          rows={illustr.rows || 1}
-        />
-      )})}
+          <Illustration key={illustr.id} 
+            imgSrc={illustr.illustration}
+            details={illustr} 
+            cols={illustr.cols || 1} 
+            rows={illustr.rows || 1}
+          />
+        )
+      })}
     </ImageList>
   );
 }

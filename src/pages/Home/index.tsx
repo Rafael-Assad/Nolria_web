@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import ImageList from '@mui/material/ImageList';
 import Illustration from "../../components/Ilustration"
 import backEnd from "../../services/api"
 import { IllustrationInfo } from "../../types"
@@ -15,19 +16,22 @@ const Home = () => {
   }, [])
   
   return (
-    <div>
-      {illustrations.map(illustration => {
-        return (<div>
-            Vou aplicar a galeria aqui depois de fazer uns ajustes na rota de pegar as ilustrações
-          </div>
-          // <Illustration key={illustration.id} 
-          //   imgSrc={illustration.illustration}
-          //   details={imageMocInfo}
-          // />
+    <ImageList variant="quilted"
+      sx={{ width: '80vw'}}
+      cols={4}
+      rowHeight={121}
+    >
+      {illustrations.map((illustr: IllustrationInfo) => {
+        return (
+          <Illustration key={illustr.id} 
+            imgSrc={illustr.illustration}
+            details={illustr} 
+            cols={illustr.cols || 1} 
+            rows={illustr.rows || 1}
+          />
         )
       })}
-      
-    </div>
+    </ImageList>
   )
 }
 
