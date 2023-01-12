@@ -8,13 +8,21 @@ import Portifolio from './pages/Portifolio'
 const Routes = () => {
   return (
     <Switch>
-      <Route path='/' element={ <Home/> } />
+      <Route path='/' 
+        element={ <Home/> } 
+      />
 
-      <Route path='/about' element={ <About/> } />
+      <Route path='/about' 
+        element={ <About/> } 
+      />
 
-      <Route path='/portifolio' element={ <Portifolio/> } />
+      <Route path='/portifolio' 
+        element={ <Portifolio/> } 
+      />
 
-      <Route path='/contact' element={ <Contact/> } />
+      <Route path='/contact' 
+        element={ <Contact/> } 
+      />
     </Switch>
   )
 }

@@ -2,8 +2,8 @@ import { forwardRef, SyntheticEvent } from 'react';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import Grow, { GrowProps } from '@mui/material/Grow';
 import { SnackBarContainer } from './styles';
+import { SeverityOpts } from '../../types';
 
-export type SeverityOpts = "error" | "warning" | "info" | "success";
 
 interface SnackProps {
   message: string;

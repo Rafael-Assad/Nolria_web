@@ -1,9 +1,8 @@
 import IlustationGalery from "../../components/IlustrationGalery"
 import { MTGamb } from "./styles"
 
-type Props = {}
 
-const Portifolio = (props: Props) => {
+const Portifolio = () => {
   return (
     <div>
 

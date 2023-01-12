@@ -1,16 +1,12 @@
 import { ImgHTMLAttributes, useState } from 'react';
+import { IllustrationInfo } from '../../types';
 import IlustrationCard from '../IlustrationCard';
 import { IlustrationContainer } from './styles'
 
-export interface ImageDetails {
-  title: string;
-  description: string;
-  creationDate?: string
-}
 
 interface IllustrationProps extends ImgHTMLAttributes<HTMLImageElement> {
   imgSrc: string;
-  details: ImageDetails;
+  details: IllustrationInfo;
 }
 
 const AboutIllustration = ({imgSrc, details, ...rest}: IllustrationProps) => {

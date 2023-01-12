@@ -5,9 +5,8 @@ import { ImBehance2 } from 'react-icons/im'
 
 import { HeaderContainer, LogoContainer, MenuContainer, SocialIconsContainer } from "./styles"
 
-type Props = {}
 
-const Header = (props: Props) => {
+const Header = () => {
   const location = useLocation()
 
   const currentPage = location.pathname

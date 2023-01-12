@@ -1,9 +1,8 @@
 import ContactForm from "../../components/ContactForm"
 import { ContactContainer } from "./styles"
 
-type Props = {}
 
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     <ContactContainer>
       <div className="contactInfo">

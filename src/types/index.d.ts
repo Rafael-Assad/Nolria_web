@@ -16,3 +16,5 @@ export interface BudgetEmail {
 	email: string;
 	message: string;
 }
+
+export type SeverityOpts = "error" | "warning" | "info" | "success";

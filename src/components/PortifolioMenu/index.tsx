@@ -4,9 +4,8 @@ import { useLocation } from 'react-router-dom'
 import { ilustrationTypes } from './scripts'
 import { MenuContainer } from './style'
 
-type Props = {}
 
-const PortifolioMenu = (props: Props) => {
+const PortifolioMenu = () => {
   const location = useLocation()
 
   const currentHash = location.hash

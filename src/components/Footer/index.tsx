@@ -1,8 +1,7 @@
 import { FooterContainer } from "./styles"
 
-type Props = {}
 
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <FooterContainer>
       <div>©2023 Nolria</div>

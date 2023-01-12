@@ -7,9 +7,8 @@ import { useIllustrations } from '../../services/hooks';
 import { ilustrationMock} from './scripts';
 import { IllustrationInfo } from '../../types';
 
-type Props = {}
 
-const IlustationGalery = (props: Props) => {
+const IlustationGalery = () => {
   const location = useLocation()
 
   const currentHash = location.hash

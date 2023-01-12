@@ -22,6 +22,7 @@ const Input = ({inputName, label, type="text", registerItem, errors, ...rest}: I
         {...registerItem(inputName)}
         {...rest}
       />
+
       <p className="errorMessage">
         {errors[inputName] && (errors[inputName].message)}
       </p>

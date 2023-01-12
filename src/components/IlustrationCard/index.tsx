@@ -1,9 +1,10 @@
-import { ImageDetails } from "../Ilustration";
+import { IllustrationInfo } from "../../types";
 import { IlustrationCardContainer, DialogPaperContainer } from "./styles"
+
 
 interface Props {
   imgSrc: string;
-  details: ImageDetails
+  details: IllustrationInfo
   show: boolean;
   closeFunction: () => void;
 }
@@ -23,7 +24,7 @@ const IlustrationCard = ({ imgSrc, details, closeFunction, show}: Props) => {
               {details.title}
             </h2>
 
-            {details.creationDate && <p>{details.creationDate}</p>}
+            {details.created_at && <p>{details.created_at}</p>}
           </section>
 
           <section>
