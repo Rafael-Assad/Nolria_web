@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { SiInstagram, SiLinktree, SiLinkedin } from 'react-icons/si'
 import { ImBehance2 } from 'react-icons/im'
 
+import PortifolioMenu from "../PortifolioMenu"
 import { HeaderContainer, LogoContainer, MenuContainer, SocialIconsContainer } from "./styles"
 
 
@@ -70,6 +71,8 @@ const Header = () => {
           <SiLinkedin className='linkedin'/>
         </a>
       </SocialIconsContainer>
+
+      {currentPage === "/portifolio" && <PortifolioMenu/>}
     </HeaderContainer>
   )
 }

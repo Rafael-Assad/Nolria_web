@@ -11,6 +11,8 @@ export const HeaderContainer = styled.header`
   justify-content: space-evenly;
 
   box-shadow: 0 4px 10px #0003;
+
+  position: relative;
 `;
 
 export const LogoContainer = styled.div`

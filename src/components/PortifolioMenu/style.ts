@@ -4,7 +4,7 @@ export const MenuContainer = styled.nav`
   width: 100vw;
   max-width: 100%;
   height: 5vh;
-  position: fixed;
+  position: absolute;
   top: 10vh;
   display: flex;
   justify-content: center;

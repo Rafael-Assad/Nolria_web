@@ -17,8 +17,8 @@ const Home = () => {
   return (
     <ImageList variant="quilted"
       sx={{ width: '80vw'}}
-      cols={4}
-      rowHeight={121}
+      cols={12}
+      rowHeight={120}
     >
       {illustrations.map((illustr: IllustrationInfo) => {
         return (
