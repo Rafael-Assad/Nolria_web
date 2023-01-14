@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import Illustration from '../Ilustration';
 
 import { useIllustrations } from '../../services/hooks';
-// import { ilustrationMock} from './scripts';
 import { IllustrationInfo } from '../../types';
 
 
@@ -14,10 +13,6 @@ const IlustationGalery = () => {
   const currentHash = location.hash
 
   const illustrationsToDisplay = useIllustrations()
-
-  // const newIllustrationMock = [
-  //   ...illustrationsToDisplay
-  // ]
 
   const filteredIlustrations = illustrationsToDisplay.filter((illustration) => {
     if (!currentHash || currentHash === "#all") return illustration
