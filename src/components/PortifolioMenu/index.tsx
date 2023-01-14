@@ -1,7 +1,7 @@
-import React from 'react'
 import { useLocation } from 'react-router-dom'
+import { useHash } from '../../services/hooks'
 
-import { ilustrationTypes } from './scripts'
+import {  getIllustrationTypesObj } from './scripts'
 import { MenuContainer } from './style'
 
 
@@ -9,6 +9,10 @@ const PortifolioMenu = () => {
   const location = useLocation()
 
   const currentHash = location.hash
+
+  const illustrationHashs = useHash()
+
+  const ilustrationTypes = getIllustrationTypesObj(illustrationHashs)
 
   return (
     <MenuContainer>

@@ -4,8 +4,8 @@ export const MenuContainer = styled.nav`
   width: 100vw;
   max-width: 100%;
   height: 5vh;
-  position: absolute;
-  top: 10vh;
+  position: absolute; 
+  bottom: -5vh;
   display: flex;
   justify-content: center;
   align-items: center;

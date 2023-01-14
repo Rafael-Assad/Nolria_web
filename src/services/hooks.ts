@@ -12,3 +12,14 @@ export const useIllustrations = () =>{
   
   return illustrations
 }
+
+export const useHash = () =>{
+  const [hashs, setHashs] = useState<string[]>([])
+
+  useEffect(() => {
+    backEnd.get('illustrations/list_all_hash')
+      .then(response => setHashs(response.data))
+  }, [])
+  
+  return hashs
+}

@@ -1,7 +1,18 @@
-export const ilustrationTypes = [
-  { id: 1, title:'ALL',        hash: '#all' },
-  { id: 2, title:'EDITORIAL',  hash: '#editorial' },
-  { id: 3, title:'PUBLISHING', hash: '#publishing' },
-  { id: 4, title:'GAMES',      hash: '#games' },
-  { id: 5, title:'PERSONAL',   hash: '#personal' },
-]
+import { HashItem } from './../../types/index.d';
+
+export const getIllustrationTypesObj = (hashList: string[]) => {
+  let ilustrationTypes: HashItem[] = [ { id: 1, title:'ALL', hash: '#all' }]
+
+  for(let index in hashList){
+    const hash = hashList[index]
+    const typeItem = { 
+      id: parseInt(index) + 2, 
+      title: hash.replace('#', '').toUpperCase(),
+      hash: hash 
+    }
+
+    ilustrationTypes.push(typeItem)
+  }
+
+  return ilustrationTypes
+}

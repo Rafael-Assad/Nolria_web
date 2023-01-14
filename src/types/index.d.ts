@@ -19,3 +19,9 @@ export interface BudgetEmail {
 }
 
 export type SeverityOpts = "error" | "warning" | "info" | "success";
+
+export interface HashItem {
+  id: number;
+  title:string;
+  hash: string;
+}
