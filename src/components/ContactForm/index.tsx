@@ -8,7 +8,8 @@ import TextArea from "../TextArea";
 
 import { schema, sendEmailBackend } from './scripts'
 import { FormContainer } from "./styles";
-import SnackBarAlert, { SeverityOpts } from "../SnackBarAlert";
+import SnackBarAlert from "../SnackBarAlert";
+import { SeverityOpts } from "../../types";
 
 
 const ContactForm = () => {

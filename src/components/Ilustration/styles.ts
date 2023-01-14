@@ -6,4 +6,7 @@ export const IlustrationContainer = styled(ImageListItem)`
   align-items: center;
   justify-content: center;
 
+  img{
+    cursor: pointer;
+  }
 `;

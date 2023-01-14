@@ -8,6 +8,7 @@ export interface IllustrationInfo{
   updated_at:string;
   cols: number;
   rows: number;
+  home_order?: number;
 }
 
 export interface BudgetEmail {

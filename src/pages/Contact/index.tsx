@@ -12,7 +12,7 @@ const Contact = () => {
           nolria.art@gmail.com
         </p>
 
-        <p>
+        <p className="budgetText">
           Consectetur dolor pariatur incididunt nostrud amet ipsum. Ea minim aliquip ea veniam eiusmod ipsum irure adipisicing dolore qui. Nulla sint cillum laborum laboris.
         </p>
       </div>

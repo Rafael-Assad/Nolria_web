@@ -1,7 +1,6 @@
 import * as yup from "yup";
 import backEnd from "../../services/api";
-import { BudgetEmail } from "../../types";
-import { SeverityOpts } from "../SnackBarAlert";
+import { BudgetEmail, SeverityOpts } from "../../types";
 
 export const schema = yup.object().shape({
   name: yup.string()
@@ -29,7 +28,7 @@ export const schema = yup.object().shape({
 
 
 export const sendEmailBackend = async (emailInfo: BudgetEmail, 
-    setOpenSnackBarState: (bool: boolean) => void, // Avaliar pra ver se da pra eliminar esse
+    setOpenSnackBarState: (bool: boolean) => void, 
     setSnackSeverityState: (severity: SeverityOpts) => void,
     setSnackMessageState: (message: string) => void
     ) => {

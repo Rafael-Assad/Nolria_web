@@ -7,21 +7,26 @@ export const ContactContainer = styled.div`
   display: flex;
 
   .contactInfo{
-    padding: 0 4rem;
+    padding: 7rem 4rem;
     width: 55%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 
     .bugdetAlert{
-      margin-bottom: 4rem;
+      padding-bottom: 4rem;
       font-weight: 700;
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
+      border-bottom: 1px solid #333;
+    }
+
+    .budgetText{
+      margin-top: 3rem;
     }
 
     p{
-    font-size: 1.2rem;
+      font-size: 1.2rem;
     }
   }
 

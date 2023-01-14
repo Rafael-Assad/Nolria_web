@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import Illustration from '../Ilustration';
 
 import { useIllustrations } from '../../services/hooks';
-import { ilustrationMock} from './scripts';
+// import { ilustrationMock} from './scripts';
 import { IllustrationInfo } from '../../types';
 
 
@@ -15,12 +15,11 @@ const IlustationGalery = () => {
 
   const illustrationsToDisplay = useIllustrations()
 
-  const newIllustrationMock = [
-    ...ilustrationMock,
-    ...illustrationsToDisplay
-  ]
+  // const newIllustrationMock = [
+  //   ...illustrationsToDisplay
+  // ]
 
-  const filteredIlustrations = newIllustrationMock.filter((illustration) => {
+  const filteredIlustrations = illustrationsToDisplay.filter((illustration) => {
     if (!currentHash || currentHash === "#all") return illustration
   
     return illustration.hash === currentHash
@@ -28,8 +27,8 @@ const IlustationGalery = () => {
 
   return (
     <ImageList variant="quilted"
-      sx={{ width: '80vw'}}
-      cols={4} rowHeight={121}
+      sx={{ width: '70vw'}}
+      cols={12} rowHeight={120}
     >
       {filteredIlustrations.map((illustr: IllustrationInfo) => {
         return (
