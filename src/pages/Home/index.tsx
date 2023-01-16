@@ -5,12 +5,12 @@ import backEnd from "../../services/api"
 import { IllustrationInfo } from "../../types"
 
 const Home = () => {
-  const [illustrations, setillustrations] = useState<IllustrationInfo[]>([])
+  const [illustrations, setIllustrations] = useState<IllustrationInfo[]>([])
 
   useEffect(() => {
     backEnd.get('illustrations')
       .then(response => {
-        setillustrations(response.data)
+        setIllustrations(response.data)
       })
   }, [])
   
