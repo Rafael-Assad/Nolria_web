@@ -13,7 +13,9 @@ const Contact = () => {
         </p>
 
         <p className="budgetText">
-          Consectetur dolor pariatur incididunt nostrud amet ipsum. Ea minim aliquip ea veniam eiusmod ipsum irure adipisicing dolore qui. Nulla sint cillum laborum laboris.
+        For work enquiries or just to say hello, please use the form
+        <br/>
+        Thank you in advance :)
         </p>
       </div>
 
