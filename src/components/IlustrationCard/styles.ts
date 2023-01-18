@@ -8,7 +8,7 @@ export const IlustrationCardContainer = styled.div`
   justify-content: space-between;
 
   .art{
-    width: 60vw;
+    min-width: 50vw;
     height: 90vh;
     border-radius: 5px 0px 0px 5px;
     
@@ -16,10 +16,10 @@ export const IlustrationCardContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    background-color: #fff5;
+    background-color: #0005;
 
     img{
-      width: 40vw;
+      width: 100%;
       height: 90vh;
 
       object-fit: contain;
@@ -33,11 +33,34 @@ export const IlustrationCardContainer = styled.div`
     border-radius: 0px 5px 5px 0px;
 
     background-color: #FFF;
+
+    section{
+      .artTitle{
+        font-family: 'Actor';
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+      }
+
+      .artCreationDate{
+        margin: 1.3rem 0; 
+      }
+
+      .artDescription{font-family: 'Acme';
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
+    }
   }
 `;
 
 export const DialogPaperContainer = styled(Dialog)`
   [role='dialog'] {
     background-color: #0000;
+
+    div{
+      justify-content: center;
+    }
   }
 `

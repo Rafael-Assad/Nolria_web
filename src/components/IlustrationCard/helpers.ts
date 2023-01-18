@@ -1,0 +1,1 @@
+export const formatDate = (dateString: string) =>  dateString.split('-').reverse().join('/')

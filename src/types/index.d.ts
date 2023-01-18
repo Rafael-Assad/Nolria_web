@@ -4,11 +4,12 @@ export interface IllustrationInfo{
   illustration:string;
   title:string;
   description:string;
-  created_at:string;
-  updated_at:string;
+  illustrated_at?: string;
   cols: number;
   rows: number;
   home_order?: number;
+  created_at:string;
+  updated_at:string;
 }
 
 export interface BudgetEmail {

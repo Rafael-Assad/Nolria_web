@@ -1,4 +1,6 @@
 import { IllustrationInfo } from "../../types";
+
+import { formatDate } from './helpers'
 import { IlustrationCardContainer, DialogPaperContainer } from "./styles"
 
 
@@ -20,15 +22,19 @@ const IlustrationCard = ({ imgSrc, details, closeFunction, show}: Props) => {
 
         <div className="artInfo">
           <section>
-            <h2>
+            <h2 className="artTitle">
               {details.title}
             </h2>
 
-            {details.created_at && <p>{details.created_at}</p>}
+            {details.illustrated_at && (
+              <p className="artTitle artCreationDate">
+                {formatDate(details.illustrated_at)}
+              </p>
+            )}
           </section>
 
           <section>
-            <p>
+            <p className="artDescription">
               {details.description}
             </p>
           </section>

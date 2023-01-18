@@ -1,4 +1,4 @@
-import artistImage from '../../assets/artist.png'
+import artistImage from '../../assets/artist.jpg'
 import AboutIllustration from '../../components/AboutIlustration'
 import { IllustrationInfo } from '../../types'
 import { AboutContainer } from "./styles"
@@ -14,6 +14,7 @@ const About = () => {
 
     Now I want to create my own universes and help building up new stories, characters and be involved in the whole process.
     My favorite things to do is playing video games, learning new things related to art, history and fictional settings, listen to R&B and drawing of course (⁠人⁠ ⁠•͈⁠ᴗ⁠•͈⁠)`,
+    illustrated_at:'',
     created_at:'string',
     updated_at:'string',
     cols: 1,
