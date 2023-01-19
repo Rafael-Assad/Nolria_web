@@ -5,4 +5,8 @@ export const IlustrationContainer = styled.figure`
   align-items: center;
   justify-content: center;
 
+  img{
+    cursor: pointer;
+  }
+
 `;

@@ -22,6 +22,7 @@ export const IlustrationCardContainer = styled.div`
       width: 100%;
       height: 90vh;
 
+    pointer-events: none;
       object-fit: contain;
     }
   }
