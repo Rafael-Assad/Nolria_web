@@ -13,7 +13,7 @@ export const AboutContainer = styled.div`
 
 
     h2{
-      height: 5rem;
+      min-height: 5rem;
       font-size: 2.5rem;
       border-bottom: 2px solid #D9D9D9;
     }

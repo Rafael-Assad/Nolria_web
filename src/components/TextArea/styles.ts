@@ -11,7 +11,7 @@ export const TextAreaContainer = styled.div`
   }
 
   textarea{
-    width: 20rem;
+    width: 32rem;
     min-height: 8rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
